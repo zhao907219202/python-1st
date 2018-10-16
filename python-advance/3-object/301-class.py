@@ -33,10 +33,12 @@
 
 
 class Student(object):
+    count = 0
 
     def __init__(self, name, score):
         self.__name = name;
         self.__score = score;
+        Student.count += 1
 
     def print_score(self):
         print('%s: %s' % (self.__name, self.__score))
@@ -71,3 +73,5 @@ bart.print_score()
 
 print('grade of Bart:', bart.get_grade())
 print('grade of Lisa:', lisa.get_grade())
+
+print("student count:", Student.count)
