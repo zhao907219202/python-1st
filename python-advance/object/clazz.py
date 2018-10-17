@@ -34,6 +34,7 @@
 
 class Student(object):
     count = 0
+    __slots__ = ('__name', '__score', 'age', 'set_gender', 'set_hometown', 'gender', 'hometown')
 
     def __init__(self, name, score):
         self.__name = name;
@@ -64,14 +65,17 @@ class Student(object):
         self.__score = score
 
 
-bart = Student("Bart Simpson", 59)
-lisa = Student("Lisa Simpson", 87)
-
-print("bart.name =", bart.get_name())
-print("bart.score =", bart.get_score())
-bart.print_score()
-
-print('grade of Bart:', bart.get_grade())
-print('grade of Lisa:', lisa.get_grade())
-
-print("student count:", Student.count)
+def print_info():
+    """
+    导入该类会执行__main__
+    所以此函数封装打印操作
+    :return:
+    """
+    bart = Student("Bart Simpson", 59)
+    lisa = Student("Lisa Simpson", 87)
+    print("bart.name =", bart.get_name())
+    print("bart.score =", bart.get_score())
+    bart.print_score()
+    print('grade of Bart:', bart.get_grade())
+    print('grade of Lisa:', lisa.get_grade())
+    print("student count:", Student.count)
