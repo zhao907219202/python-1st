@@ -23,7 +23,7 @@
     except ImportError:
         from StringIO import StringIO
 
-    注意: Python 3 中没有 StringIO 和 cStringIO 只有 io
+    注意: Python 3 中没有 StringIO 和 cStringIO 只有 io_program
 
 3. __future__
     Python的新版本会引入新的功能，但是，实际上这些功能在上一个老版本中就已经存在了。
